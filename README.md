@@ -24,7 +24,7 @@ cd scripts/
 node compile_starknet.mjs
 ```
 
-At this point all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starkent/`
+Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starkent/`
 
 ## Box Structure
 
