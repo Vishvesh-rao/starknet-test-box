@@ -1,0 +1,49 @@
+{
+  "name": "starknet-box",
+  "version": "0.0.1",
+  "description": "Boilerplate proof of concept to compile, migrate, and perform L1 <-> L2 interactions on StarkNet.",
+  "main": "truffle-config.starknet.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "",
+    "starknet:compile": "node ./scripts/compile_starknet.mjs --disable_hints=$npm_config_disable_hints",
+    "starknet:deploy": "node ./scripts/deploy_starknet.mjs --network=$npm_config_network --contract=$npm_config_contract",
+    "starknet:deploy_account": "node ./scripts/deploy_account.mjs --network=$npm_config_network",
+    "starknet:invoke": "node scripts/call_invoke_transaction.mjs --command='invoke' --contract=$npm_config_contract --address=$npm_config_address --function=$npm_config_function --network=$npm_config_network",
+    "starknet:call": "node ./scripts/call_invoke_transaction.mjs --command='call' --contract=$npm_config_contract --address=$npm_config_address --function=$npm_config_function --network=$npm_config_network",
+    "starknet:tx_status": "node ./scripts/tx_status.mjs --hash=$npm_config_hash --network=$npm_config_network --contract=$npm_config_contract --error_message=$npm_config_error_message",
+    "starknet:start_devnet": "node ./scripts/start_devnet.mjs --arm64=$npm_config_arm64",
+    "starknet:test": "node ./scripts/test_starknet.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truffle-box/starknet-box.git"
+  },
+  "keywords": [
+    "StarkNet",
+    "Cairo",
+    "Ethereum",
+    "Truffle",
+    "Layer",
+    "2"
+  ],
+  "author": "David Killen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/truffle-box/starknet-box/issues"
+  },
+  "homepage": "https://github.com/truffle-box/starknet-box#readme",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "dotenv": "^10.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dockerode": "^3.3.1",
+    "fse": "^4.0.1",
+    "node-fetch": "^3.2.4",
+    "yargs": "^17.3.1"
+  }
+}
