@@ -1,5 +1,8 @@
+import fse from 'fse';
+import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
+import { Image } from './truffle_docker.mjs';
 import starknetConfig from '../truffle-config.starknet.js';
 import { l2_compile } from './transpiler.mjs'
 
