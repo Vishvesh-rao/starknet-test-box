@@ -9,7 +9,6 @@ import shutil
 path = os.getcwd() 
 root_path = "/".join((path.split("/")[:-1])) 
 contracts = []
-warp = "/home/vishvesh/.config/yarn/global/node_modules/@nethermindeth/warp/bin/warp"
 
 print("executig.....")
 
@@ -31,7 +30,7 @@ def get_contracts():
     return contracts
 
 def transpile(contract):
-    res = subprocess.run([warp, "transpile", contract])
+    res = subprocess.run(["warp", "transpile", contract])
 
 def cleanup():
     src_path = path + "/warp_output/contracts/"
