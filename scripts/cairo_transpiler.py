@@ -10,8 +10,6 @@ path = os.getcwd()
 root_path = "/".join((path.split("/")[:-1])) 
 contracts = []
 
-print("executig.....")
-
 res = subprocess.run(["mkdir", "contracts"])
 
 def copy_contracts():
