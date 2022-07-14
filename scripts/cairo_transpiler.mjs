@@ -19,7 +19,7 @@ function copy_contracts(){
 }
 
 function del_dir(){
-    const src = jetpack.cwd(path + "/warp_output/contracts/");
+    const src = jetpack.cwd(path + "/warp_output/");
     const dst = jetpack.cwd(project_root + "/contracts/starknet/");
     let cairo_contracts = src.find({ matching: "*.cairo" });
 
@@ -35,7 +35,7 @@ function del_dir(){
 copy_contracts();
 
 for (let i=0; i < sol_contracts.length; i++) {
-  stdout = await run("warp transpile " + "contracts/" + sol_contracts[i]);
+  stdout = await run("warp transpile " + sol_contracts[i]);
 }
 
 del_dir();
