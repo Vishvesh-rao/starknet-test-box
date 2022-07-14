@@ -4,7 +4,7 @@ import { hideBin } from 'yargs/helpers';
 
 import { Image } from './truffle_docker.mjs';
 import starknetConfig from '../truffle-config.starknet.js';
-import { l2_compile } from './transpiler.mjs'
+import { l2_compile } from './cairo_transpiler.mjs'
 
 // Pretty log output
 import { Logger } from './logging.mjs';
