@@ -34,7 +34,7 @@ On unboxing the entire box is set up and the etereum folder is created under `<p
 
 Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starkent/`.
 
-The two main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
+The three main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
 - [`cairo_transpiler.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.mjs)
 - [`compile_starknet.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/compile_starknet.mjs)
 - [`exec_shellcmd.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/exec_shellcmd.mjs)
