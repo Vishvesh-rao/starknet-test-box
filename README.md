@@ -2,7 +2,7 @@
 
 (Testing warp transpilation on truffle)
 
-The Truffle StarkNet-transpiler Box provides the boilerplate Truffle structure necessary to start coding for StarkWare's Ethereum L2 solution, StarkNet. This is different from starknet box as it allows the developer to write solidity contracts and the the compiler will automatically transpile these contracts to cairo contracts and deploy them on strakent without the user having to do any extra work.
+The Truffle StarkNet-transpiler Box provides the boilerplate Truffle structure necessary to start coding for StarkWare's Ethereum L2 solution, StarkNet. This is different from starknet box as it allows the developer to write solidity contracts and the compiler will automatically transpile these contracts to cairo contracts and deploy them on strakent without the user having to do any extra work.
 
 ## Installation Instructions
 
