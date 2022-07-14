@@ -43,6 +43,14 @@ The three main files that are releavant for transpiling solidity to cairo are pr
 - [`compile_starknet.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/compile_starknet.mjs)
 - [`exec_shellcmd.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/exec_shellcmd.mjs)
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ### #cairo_transpiler.mjs
 
 This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starkent/`.
