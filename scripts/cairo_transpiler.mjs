@@ -5,7 +5,6 @@ import rimraf from 'rimraf';
 let path = process.cwd();
 let project_root = (path.split("/").slice(0,-1)).join("/");
 let sol_contracts = [];
-let warp = "/home/vishvesh/.config/yarn/global/node_modules/@nethermindeth/warp/bin/warp";
 
 let { stdout } = await run("mkdir contracts");
 
@@ -36,7 +35,7 @@ function del_dir(){
 copy_contracts();
 
 for (let i=0; i < sol_contracts.length; i++) {
-  stdout = await run(warp + " transpile " + "contracts/" + sol_contracts[i]);
+  stdout = await run("warp transpile " + "contracts/" + sol_contracts[i]);
 }
 
 del_dir();
