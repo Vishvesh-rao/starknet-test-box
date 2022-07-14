@@ -19,10 +19,6 @@ function copy_contracts(){
     });
 }
 
-// async function transpile(contract){
-//   stdout = await l2_compile(warp + " transpile " + "contracts/" + contract);
-// }
-
 function del_dir(){
     const src = jetpack.cwd(path + "/warp_output/contracts/");
     const dst = jetpack.cwd(project_root + "/contracts/starknet/");
