@@ -35,22 +35,22 @@ On unboxing the entire box is set up and the etereum folder is created under `<p
 Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starkent/`.
 
 The two main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
-- [`cairo_transpiler.py`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.py)
+- [`cairo_transpiler.py`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.mjs)
 - [`compile_starknet.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/compile_starknet.mjs)
-- [`transpiler.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/transpiler.mjs)
+- [`exec_shellcmd.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/exec_shellcmd.mjs)
 
-### `cairo_transpiler.py`
+### cairo_transpiler.mjs
 
 This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starkent/`.
+It imports from `exec_shellcmd.mjs` to enable execution of shell commands.
 
-### `transpiler.mjs`
+### exec_shellcmd.mjs
 
-This module defines the `l2_compiler` fucntion which executes the python script for transpiling contracts.
+This is a utillity module which defines the `run()` fucntion to execute shell commands.
 
-
-### `compile_starknet.mjs`
+### compile_starknet.mjs
 
 This contract is main module with regards to the compilation of cairo contracts store in `<project-root>/contracts/starkent/`.
 
-This imports transpiler.mjs module and calls the `l2_compiler` function which executes the `cairo_transpiler.py`
+This imports cairo_transpiler.mjs module 
 
