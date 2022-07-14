@@ -45,10 +45,8 @@ The three main files that are releavant for transpiling solidity to cairo are pr
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    compile_starknet.mjs-->cairo_transpiler.mjs;
+    cairo_transpiler.mjs-->exec_shellcmd.mjs
 ```
 
 ### #cairo_transpiler.mjs
