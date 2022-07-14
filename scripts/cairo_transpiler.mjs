@@ -23,7 +23,6 @@ function del_dir(){
     const dst = jetpack.cwd(project_root + "/contracts/starknet/");
     let cairo_contracts = src.find({ matching: "*.cairo" });
 
-    console.log(cairo_contracts);
     cairo_contracts.forEach(filePath => {
       src.copy(filePath, dst.path(filePath));
     });
