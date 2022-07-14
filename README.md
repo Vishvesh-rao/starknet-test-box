@@ -19,7 +19,12 @@ truffle unbox https://github.com/Vishvesh-rao/starknet-test-box
 ```bash
 cd scripts/ 
 ```
-5. run `compile_starknet.mjs`:
+5. Installing packages
+```bash
+npm i fs-jetpack
+npm i rimrag
+```
+6. run `compile_starknet.mjs`:
 ```bash
 node compile_starknet.mjs
 ```
