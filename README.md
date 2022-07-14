@@ -21,8 +21,7 @@ cd scripts/
 ```
 5. Installing packages
 ```bash
-npm i fs-jetpack
-npm i rimrag
+npm i fs-jetpack rimraf
 ```
 6. run `compile_starknet.mjs`:
 ```bash
