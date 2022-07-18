@@ -32,9 +32,9 @@ Once this finishes all your contracts present in `<project-root>/contracts/ether
 
 ## Box Structure
 
-The main core of this box is in the `scripts` directory. This directory contains all the necessary l2 compilation/deploying files to enable cairo contracts to be deployed to strakWares networks.
+The main core of this box is in the `scripts` directory. This directory contains all the necessary l2 compilation/deploying files to enable cairo contracts to be deployed to starkWares networks.
 
-On unboxing the entire box is set up and the etereum folder is created under `<project-root>/contracts/ethereum/`.
+On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`.
 
 Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starkent/`.
 
@@ -53,7 +53,7 @@ graph TD;
 
 ### #cairo_transpiler.mjs
 
-This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starkent/`.
+This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the end deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starkent/`.
 
 It imports from `exec_shellcmd.mjs` to enable execution of shell commands.
 
@@ -63,7 +63,7 @@ This is a utillity module which defines the `run()` fucntion to execute shell co
 
 ### #compile_starknet.mjs
 
-This contract is main module with regards to the compilation of cairo contracts store in `<project-root>/contracts/starkent/`.
+This contract is main module with regards to the compilation of cairo contracts stored in `<project-root>/contracts/starkent/`.
 
 This imports `cairo_transpiler.mjs` module 
 
