@@ -28,7 +28,7 @@ npm i fs-jetpack rimraf
 node compile_starknet.mjs
 ```
 
-Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starkent/`
+Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starknet/`
 
 ## Box Structure
 
@@ -36,7 +36,7 @@ The main core of this box is in the `scripts` directory. This directory contains
 
 On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`.
 
-Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starkent/`.
+Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starknet/`.
 
 The three main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
 - [`cairo_transpiler.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.mjs)
@@ -53,7 +53,7 @@ graph TD;
 
 ### #cairo_transpiler.mjs
 
-This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the end deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starkent/`.
+This is the main executeble file which links truffle to warp and transpiling the contracts and is also responsible for certain folder creations, moving around of contracts, and at the end deleting any extra folders created and storing the transpiled cairo contracts into `<project-root>/contracts/starknet/`.
 
 It imports from `exec_shellcmd.mjs` to enable execution of shell commands.
 
@@ -63,7 +63,7 @@ This is a utillity module which defines the `run()` fucntion to execute shell co
 
 ### #compile_starknet.mjs
 
-This contract is main module with regards to the compilation of cairo contracts stored in `<project-root>/contracts/starkent/`.
+This contract is main module with regards to the compilation of cairo contracts stored in `<project-root>/contracts/starknet/`.
 
 This imports `cairo_transpiler.mjs` module 
 
