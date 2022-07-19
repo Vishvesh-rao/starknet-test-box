@@ -18,6 +18,15 @@ function copy_contracts(){
     });
 }
 
+async function transpile(){
+  console.log("inside transpile")
+  for (let i=0; i < sol_contracts.length; i++) {
+    stdout = await run(warp + " transpile " + "contracts/" + sol_contracts[i]);
+  }
+
+  return stdout;
+}
+
 function del_dir(){
     const src = jetpack.cwd(path + "/warp_output/");
     const dst = jetpack.cwd(project_root + "/contracts/starknet/");
@@ -31,10 +40,4 @@ function del_dir(){
     rimraf.sync(path + "/warp_output/");
 }
 
-copy_contracts();
-
-for (let i=0; i < sol_contracts.length; i++) {
-  stdout = await run("warp transpile " + sol_contracts[i]);
-}
-
-del_dir();
+export{copy_contracts, transpile, del_dir}
