@@ -4,15 +4,18 @@ import { hideBin } from 'yargs/helpers';
 
 import { Image } from './truffle_docker.mjs';
 import starknetConfig from '../truffle-config.starknet.js';
-import { copy_contracts, transpile, del_dir } from './cairo_transpiler.mjs'
+import { copy_contracts,copy_contracts_selectively, transpile, del_dir } from './cairo_transpiler.mjs'
 
 // Pretty log output
 import { Logger } from './logging.mjs';
 const logger = new Logger();
 
-copy_contracts();
-let {stdout} = await transpile();
-del_dir();
+if (starknetConfig.compilers.cairo.selecetive_compile){
+    copy_contracts_selectively();
+}
+else{
+    copy_contracts();
+}
 
 console.log("l2 compilation done!!")
 
