@@ -18,6 +18,17 @@ function copy_contracts(){
     });
 }
 
+function copy_contracts_selectively(){
+  const src = jetpack.cwd(project_root + "/contracts/ethereum/");
+  const dst = jetpack.cwd(path + "/contracts/");
+
+  sol_contracts = src.find({ matching: "cairo_*.sol" });
+
+  sol_contracts.forEach(filePath => {
+    src.copy(filePath, dst.path(filePath));
+  });
+}
+
 async function transpile(){
   console.log("inside transpile")
   for (let i=0; i < sol_contracts.length; i++) {
