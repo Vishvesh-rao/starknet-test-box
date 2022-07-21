@@ -40,4 +40,4 @@ function del_dir(){
     rimraf.sync(path + "/warp_output/");
 }
 
-export{copy_contracts, transpile, del_dir}
+export{copy_contracts, copy_contracts_selectively, transpile, del_dir}
