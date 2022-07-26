@@ -9,23 +9,19 @@ The Truffle Warp-transpiler Box provides the boilerplate Truffle structure neces
 1. As yet this box has not been officially published on truffles repo so for now to unbox run:
 
 ```bash
-truffle unbox https://github.com/Vishvesh-rao/starknet-test-box
+truffle unbox https://github.com/NethermindEth/warp-test-box
 ```
 2. The solidity contracts to be transpiled should be put into `/contracts/ethereum/` folder.
 
 3. At this point if you are not in the root folder of your project then return to the root folder.
 
-4. go to the scripts directory:
-```bash
-cd scripts/ 
-```
 5. Installing packages
 ```bash
 npm i fs-jetpack rimraf
 ```
-6. run `compile_starknet.mjs`:
+6. To enable transpilation run `compile_starknet.mjs`:
 ```bash
-node compile_starknet.mjs
+npm run starknet:compile
 ```
 
 Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starknet/`
