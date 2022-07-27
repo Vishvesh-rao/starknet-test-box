@@ -4,7 +4,7 @@
 
 The Truffle Warp-transpiler Box provides the boilerplate Truffle structure necessary to start coding for StarkWare's Ethereum L2 solution, StarkNet. This is different from starknet box as it allows the developer to write solidity contracts and the compiler will automatically transpile these contracts to cairo contracts and deploy them on strakent without the user having to do any extra work.
 
-## Installation Instructions
+## Instructions
 
 1. As yet this box has not been officially published on truffles repo so for now to unbox run:
 
@@ -19,14 +19,23 @@ truffle unbox https://github.com/NethermindEth/warp-test-box
 ```bash
 npm i fs-jetpack rimraf
 ```
-6. To enable transpilation run `compile_starknet.mjs`:
+### Transpilation
+
+To enable transpilation run `compile_starknet.mjs`:
 ```bash
 npm run starknet:compile
 ```
 
+### Deploy via warp
+
+To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
+```bash
+npm run starknet:deploy <constructor-arguments>
+```
+
 Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starknet/`
 
-## Box Structure
+## Box Structure ( Transpilation )
 
 The main core of this box is in the `scripts` directory. This directory contains all the necessary l2 compilation/deploying files to enable cairo contracts to be deployed to starkWares networks.
 
