@@ -35,14 +35,6 @@ selecetive_compile: true, ## Selective compile is set
 ```bash
 selecetive_compile: false, ## Selective compile is disabled
 ```
-
-### Deploy via warp
-
-To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
-```bash
-npm run starknet:deploy <constructor-arguments>
-```
-
 Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starknet/`
 
 ## Box Structure ( Transpilation )
@@ -52,6 +44,13 @@ The main core of this box is in the `scripts` directory. This directory contains
 On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`.
 
 Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starknet/`.
+
+### Deploy via warp
+
+To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
+```bash
+npm run starknet:deploy <constructor-arguments>
+```
 
 The three main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
 - [`cairo_transpiler.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.mjs)
