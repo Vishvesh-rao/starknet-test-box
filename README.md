@@ -26,6 +26,16 @@ To enable transpilation run `compile_starknet.mjs`:
 npm run starknet:compile
 ```
 
+### Selective Transpilation
+
+If the user requires as part of the project that only a certain specified contracts be converted to L2 ( cairo ) and rest be in solidity then the user can make use of the selective transpilation feature by modifying the selecctive_transpile field in `truffle-config.starknet.js`
+```bash
+selecetive_compile: true, ## Selective compile is set 
+```
+```bash
+selecetive_compile: false, ## Selective compile is disabled
+```
+
 ### Deploy via warp
 
 To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
