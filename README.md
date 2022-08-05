@@ -15,10 +15,6 @@ truffle unbox https://github.com/NethermindEth/warp-test-box
 
 3. At this point if you are not in the root folder of your project then return to the root folder.
 
-5. Installing packages
-```bash
-npm i fs-jetpack rimraf
-```
 ### Transpilation
 
 To enable transpilation run `compile_starknet.mjs`:
