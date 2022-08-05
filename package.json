@@ -1,5 +1,5 @@
 {
-  "name": "starknet-box",
+  "name": "warp-test-box",
   "version": "0.0.1",
   "description": "Boilerplate proof of concept to compile, migrate, and perform L1 <-> L2 interactions on StarkNet.",
   "main": "truffle-config.starknet.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/truffle-box/starknet-box.git"
+    "url": "git+https://github.com/NethermindEth/warp-test-box"
   },
   "keywords": [
     "StarkNet",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/truffle-box/starknet-box/issues"
   },
-  "homepage": "https://github.com/truffle-box/starknet-box#readme",
+  "homepage": "https://github.com/NethermindEth/warp-test-box#readme",
   "devDependencies": {
     "@truffle/hdwallet-provider": "^2.0.8",
     "dotenv": "^10.0.0"
@@ -45,5 +45,6 @@
     "fse": "^4.0.1",
     "node-fetch": "^3.2.4",
     "yargs": "^17.3.1"
+    
   }
 }
