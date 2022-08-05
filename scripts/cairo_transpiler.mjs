@@ -18,7 +18,6 @@ function get_contracts_selectively(){
 }
 
 async function transpile(){
-  console.log("inside transpile")
   for (let i=0; i < sol_contracts.length; i++) {
     stdout = await run("warp" + " transpile " + "contracts/ethereum/" + sol_contracts[i]);
   }
