@@ -39,7 +39,6 @@ module.exports = {
   // Configure your Cairo compilers
   compilers: {
     cairo: {
-      selecetive_compile: false,
       repository: "trufflesuite/cairo-starknet-cli",  // Docker Hub repository
       version: "0.9.0",                               // Version tag
     }
