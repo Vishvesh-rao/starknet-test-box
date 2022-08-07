@@ -22,16 +22,15 @@ To enable transpilation run `compile_starknet.mjs`:
 npm run starknet:compile
 ```
 
-### Selective Transpilation
 
-If the user requires as part of the project that only a certain specified contracts be converted to L2 ( cairo ) and rest be in solidity then the user can make use of the selective transpilation feature by modifying the selecctive_transpile field in `truffle-config.starknet.js`
-```bash
-selecetive_compile: true, ## Selective compile is set 
-```
-```bash
-selecetive_compile: false, ## Selective compile is disabled
-```
-Once this finishes all your contracts present in `<project-root>/contracts/ethereum/` will be converted into cairo contracts and you can see those in `<project-root>/contracts/starknet/`
+
+
+
+
+
+
+
+
 
 ## Box Structure ( Transpilation )
 
