@@ -11,7 +11,7 @@ The Truffle Warp-transpiler Box provides the boilerplate Truffle structure neces
 ```bash
 truffle unbox https://github.com/NethermindEth/warp-test-box
 ```
-2. The solidity contracts to be transpiled should be put into `/contracts/ethereum/` folder.
+2. The solidity contracts to be transpiled should be put into `/contracts/starkent/` folder.
 
 3. At this point if you are not in the root folder of your project then return to the root folder.
 
@@ -36,9 +36,9 @@ npm run starknet:compile
 
 The main core of this box is in the `scripts` directory. This directory contains all the necessary l2 compilation/deploying files to enable cairo contracts to be deployed to starkWares networks.
 
-On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`.
+On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`solidity contracts in this folder with name starting with `cairo_` will be comverted to cairo and stored in the starknet folder.
 
-Solidity contracts present in this folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starknet/`.
+Solidity contracts present in the starknet folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starknet/`.
 
 ### Deploy via warp
 
