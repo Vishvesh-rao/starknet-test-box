@@ -22,6 +22,14 @@ To enable transpilation run `compile_starknet.mjs`:
 npm run starknet:compile
 ```
 
+### Deploy via warp
+
+To deply cairo files present in `contracts/starknet` folder.
+To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
+```bash
+npm run starknet:deploy <constructor-arguments>
+```
+
 ## Transpilation Process
 
 There are two folders present in the contracts folder ethereum and starknet.
@@ -30,14 +38,6 @@ The `contracts/ethereum` folder conatains all solidity files that are not meant 
 
 By default all L1 files should be put into ethereum folder while solidity files meant for transpilation for L2 part should be put into starknet folder.
 
-
-### Deploy via warp
-
-To deply cairo files present in `contracts/starknet` folder.
-To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
-```bash
-npm run starknet:deploy <constructor-arguments>
-```
 
 ## Box Structure ( Transpilation )
 
