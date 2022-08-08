@@ -26,7 +26,7 @@ npm run starknet:compile
 
 There are two folders present in the contracts folder ethereum and starknet.
 
-The ethereum folder conatains all solidity files that are not meant to be transpiled example L1 code while the starknet folder contains files which will be automatically transpiled to cairo on running the compile command. However solidity files with name *cairo_*.sol* which are present in the ethereum folder with be selectively transpiled to cairo and put into the starknet folder.
+The `contracts/ethereum` folder conatains all solidity files that are not meant to be transpiled example L1 code while the `contracts/starknet` folder contains files which will be automatically transpiled to cairo on running the compile command. However solidity files with name `cairo_*.sol` which are present in the ethereum folder with be selectively transpiled to cairo and put into the starknet folder.
 
 By default all L1 files should be put into ethereum folder while solidity files meant for transpilation for L2 part should be put into starknet folder.
 
