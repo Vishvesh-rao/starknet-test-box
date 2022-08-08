@@ -22,15 +22,22 @@ To enable transpilation run `compile_starknet.mjs`:
 npm run starknet:compile
 ```
 
+## Transpilation Process
+
+There are two folders present in the contracts folder ethereum and starknet.
+
+The ethereum folder conatains all solidity files that are not meant to be transpiled example L1 code while the starknet folder contains files which will be automatically transpiled to cairo on running the compile command. However solidity files with name *cairo_*.sol* which are present in the ethereum folder with be selectively transpiled to cairo and put into the starknet folder.
+
+By default all L1 files should be put into ethereum folder while solidity files meant for transpilation for L2 part should be put into starknet folder.
 
 
+### Deploy via warp
 
-
-
-
-
-
-
+To deply cairo files present in `contracts/starknet` folder.
+To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
+```bash
+npm run starknet:deploy <constructor-arguments>
+```
 
 ## Box Structure ( Transpilation )
 
@@ -39,13 +46,6 @@ The main core of this box is in the `scripts` directory. This directory contains
 On unboxing the entire box is set up and the ethereum folder is created under `<project-root>/contracts/ethereum/`solidity contracts in this folder with name starting with `cairo_` will be comverted to cairo and stored in the starknet folder.
 
 Solidity contracts present in the starknet folder will be converted into ciaro contracts and stored in `<project-root>/contracts/starknet/`.
-
-### Deploy via warp
-
-To deploy transpiled contracts via warp run the below command giving constructor arguments after the command. Arguments must be comma seperated.
-```bash
-npm run starknet:deploy <constructor-arguments>
-```
 
 The three main files that are releavant for transpiling solidity to cairo are present in the scripts folder.
 - [`cairo_transpiler.mjs`](https://github.com/Vishvesh-rao/starknet-test-box/blob/main/scripts/cairo_transpiler.mjs)
